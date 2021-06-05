@@ -1,0 +1,103 @@
+:root{
+    --form:rgba(255.255.255.0);
+    --background:#171020;
+    --label_color:#fff;
+    --circle_1_color:linear-gradient(0deg,blue,red);
+    --circle_2_color:linear-gradient(0deg,rgb(228, 85, 20),rgb(141, 4, 141));
+}
+
+
+body{
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+}
+
+form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    height:50vh;
+    flex-direction: column;
+    z-index: 1;
+    box-shadow: -3px 2px 5px var(--form);
+    overflow: hidden;
+}
+
+input{
+    display:flex;
+    width:90%;
+    justify-content: center;
+    align-items: center;
+    color:var(--background);
+    text-align: center;
+}
+
+input:last-child{
+    width:40%;
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+label{
+    font-weight: bold;
+    color:var(--label_color);
+}
+
+.circle_1{
+    width: 30rem; height:30rem;
+    clip-path:circle(50%);
+    top:-20%;
+    left:-10%;
+    position: fixed;
+    background-image: var(--circle_1_color);
+    opacity: .5;
+}
+
+.circle_2{
+    width: 25rem; height:25rem;
+    clip-path:circle(50%);
+    bottom:-20%;
+    right:-10%;
+    position: fixed;
+    background-image: var(--circle_2_color);
+    opacity: .5;
+}
+
+.err{
+    position: sticky; 
+    width:13rem;
+    height:2rem;
+    text-shadow: 1px 15px 3px var(--form),
+                1px 1px 3px var(--background);
+    color:red;
+    font-weight: bold;
+    transform:translateY(-70%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.back{
+    width:2rem; height: 2rem;
+    background-color: #fff;
+    border-radius: 9999px;
+    z-index: 2;
+    position: fixed;
+    transform:translateY(-150%);
+    left:20%
+}
+
